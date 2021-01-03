@@ -15,24 +15,27 @@
 function work_pagination(e) {
     var evtobj = window.event? event : e
     if ((evtobj.keyCode === 78 && evtobj.shiftKey) || (evtobj.keyCode === 39)) {
-        // Next Page Keystroke (Shift + N || Right Arrow)
+        // Next Chapter/Part in Series Keystroke (Shift + N || Right Arrow)
         const next_button_element = document.querySelector(".chapter.next a") || document.querySelector(".series .next");
         window.location.href = next_button_element.href;
     } else if ((evtobj.keyCode === 80 && evtobj.shiftKey) || (evtobj.keyCode === 37)) {
-        // Previous Page Keystroke (Shift + P || Left Arrow)
+        // Previous Chapter/Part in Series Keystroke (Shift + P || Left Arrow)
         const prev_button_element = document.querySelector(".chapter.previous a") || document.querySelector(".series .previous");
         window.location.href = prev_button_element.href;
+    } else if (evtobj.keyCode === 75) {
+        // Kudos Keystroke (K)
+        document.querySelector("form#new_kudo input[type=submit]").click();
     }
 }
 
 function collection_pagination(e) {
     var evtobj = window.event? event : e
-    if (evtobj.keyCode == 78 && evtobj.shiftKey) {
-        // Next Page Keystroke (Shift + N)
+    if ((evtobj.keyCode === 78 && evtobj.shiftKey) || (evtobj.keyCode === 39)) {
+        // Next Page Keystroke (Shift + N || Right Arrow)
         const next_button_element = document.querySelector("li.next a[rel=next]");
         window.location.href = next_button_element.href;
-    } else if (evtobj.keyCode == 80 && evtobj.shiftKey) {
-        // Previous Page Keystroke (Shift + P)
+    } else if ((evtobj.keyCode === 80 && evtobj.shiftKey) || (evtobj.keyCode === 37)) {
+        // Previous Page Keystroke (Shift + P || Left Arrow)
         const prev_button_element = document.querySelector("li.previous a[rel=prev]");
         window.location.href = prev_button_element.href;
     }
