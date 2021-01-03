@@ -69,7 +69,7 @@
     const tuples = formats
       .map(ext => [
         ext.toUpperCase(),
-        `/downloads/${workId}/${title.replace(/[^\w _-]+/g, "").replace(/ +/g, " ").replace(/^(.{24}[\w.]*).*/, "$1")}.${ext}?updated_at=${Date.now()}`
+        `https://download.archiveofourown.org/downloads/${workId}/${title.replace(/[^\w _-]+/g, "").replace(/ +/g, " ").replace(/^(.{24}[\w.]*).*/, "$1")}.${ext}?updated_at=${Date.now()}`
       ]);
 
     blurb.innerHTML += `
