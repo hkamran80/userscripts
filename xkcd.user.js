@@ -11,7 +11,7 @@
 // ==/UserScript==
 
 function pagination(e) {
-    var evtobj = window.event? event : e
+    var evtobj = window.event ? event : e;
     if (evtobj.keyCode == 78 && evtobj.shiftKey) {
         // Next Page Keystroke (Shift + N)
         const next_button_element = document.querySelector("a[rel=next]");

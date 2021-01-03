@@ -11,18 +11,52 @@
 // ==/UserScript==
 
 function pagination(e) {
-    var evtobj = window.event? event : e
+    var evtobj = window.event ? event : e;
     if (evtobj.keyCode == 78 && evtobj.shiftKey) {
         // Next Page Keystroke (Shift + N)
-        const next_button_element = document.evaluate("//button[contains(text(),'Next >')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        window.location.href = window.location.protocol + "//" + window.location.host + next_button_element.getAttribute("onclick").replace("self.location=", "").replace("'", "").replace("'", "");
+        const next_button_element = document.evaluate(
+            "//button[contains(text(),'Next >')]",
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
+        window.location.href =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            next_button_element
+                .getAttribute("onclick")
+                .replace("self.location=", "")
+                .replace("'", "")
+                .replace("'", "");
     } else if (evtobj.keyCode == 80 && evtobj.shiftKey) {
         // Previous Page Keystroke (Shift + P)
-        const prev_button_element = document.evaluate("//button[contains(text(),'< Prev')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-        window.location.href = window.location.protocol + "//" + window.location.host + prev_button_element.getAttribute("onclick").replace("self.location=", "").replace("'", "").replace("'", "");
+        const prev_button_element = document.evaluate(
+            "//button[contains(text(),'< Prev')]",
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
+        window.location.href =
+            window.location.protocol +
+            "//" +
+            window.location.host +
+            prev_button_element
+                .getAttribute("onclick")
+                .replace("self.location=", "")
+                .replace("'", "")
+                .replace("'", "");
     } else if (evtobj.keyCode == 76 && evtobj.shiftKey) {
         // Follow/Favorite Keystroke (Shift + L)
-        const follow_fav_button_element = document.evaluate("//button[contains(text(),'Follow/Fav')]", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+        const follow_fav_button_element = document.evaluate(
+            "//button[contains(text(),'Follow/Fav')]",
+            document,
+            null,
+            XPathResult.FIRST_ORDERED_NODE_TYPE,
+            null
+        ).singleNodeValue;
         follow_fav_button_element.click();
     }
 }
