@@ -76,9 +76,7 @@
         const formats = ["azw3", "epub", "mobi", "pdf", "html"];
         const tuples = formats.map((ext) => [
             ext.toUpperCase(),
-            `https://download.archiveofourown.org/downloads/${workId}/${cleanFilename(
-                title
-            )}.${ext}?updated_at=${Date.now()}`,
+            "https://download.archiveofourown.org/downloads/" + workId + "/" + cleanFilename(title) + "." + ext + "?updated_at=" + Date.now()
         ]);
 
         blurb.innerHTML += `
