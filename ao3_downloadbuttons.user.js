@@ -7,7 +7,7 @@
 // @include     http*://archiveofourown.org/*readings*
 // @include     http*://archiveofourown.org/series/*
 // @grant       none
-// @version     2.4.1
+// @version     2.4.1.1
 // ==/UserScript==
 
 (function () {
