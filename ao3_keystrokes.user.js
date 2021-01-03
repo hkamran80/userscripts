@@ -4,8 +4,8 @@
 // @version      1.0.4
 // @description  Keystrokes for AO3
 // @author       H. Kamran
-// @downloadUrl  https://gist.github.com/hkamran80/a9bc0a6c13d1137d150980d425d7d025/raw/ao3.user.js
-// @updateUrl    https://gist.github.com/hkamran80/a9bc0a6c13d1137d150980d425d7d025/raw/ao3.user.js
+// @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
+// @updateUrl    https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
 // @match        http*://archiveofourown.org/works/*
 // @match        http*://archiveofourown.org/collections/*
 // @match        http*://archiveofourown.org/tags/*
