@@ -76,27 +76,25 @@
         const formats = ["azw3", "epub", "mobi", "pdf", "html"];
         const tuples = formats.map((ext) => [
             ext.toUpperCase(),
-            "https://download.archiveofourown.org/downloads/" + workId + "/" + cleanFilename(title) + "." + ext + "?updated_at=" + Date.now()
+            "https://download.archiveofourown.org/downloads/" +
+                workId +
+                "/" +
+                cleanFilename(title) +
+                "." +
+                ext +
+                "?updated_at=" +
+                Date.now(),
         ]);
 
-        blurb.innerHTML += `
-      <div class="download actions" aria-haspopup="true">
-        <a href="#" class="collapsed">Download</a>
-        <ul class="expandable secondary hidden">
-          ${tuples
-              .map(
-                  ([label, href]) => `
-              <li>
-                <a href=${href}>
-                  ${label}
-                </a>
-              </li>
-            `
-              )
-              .join("")}
-        </ul>
-      </div>
-    `;
+        blurb.innerHTML +=
+            '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden"></ul>';
+        blurb.innerHTML += tuples
+            .map(
+                ([label, href]) =>
+                    '<li><a href="' + href + '">' + label + "</a></li>"
+            )
+            .join("");
+        blurb.innerHTML += "</ul></div>";
 
         blurb
             .querySelector(".download.actions > a")
