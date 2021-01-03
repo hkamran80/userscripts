@@ -7,7 +7,7 @@
 // @include     http*://archiveofourown.org/*readings*
 // @include     http*://archiveofourown.org/series/*
 // @grant       none
-// @version     2.3.3
+// @version     2.3.4
 // ==/UserScript==
 
 (function () {
@@ -86,30 +86,15 @@
                 Date.now(),
         ]);
 
-        console.log(
-            tuples.map(
-                ([label, href]) =>
-                    '<li><a href="' + href + '">' + label + "</a></li>"
-            )
-        );
-        console.log(
+        blurb.innerHTML +=
+            '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden">' +
             tuples
                 .map(
                     ([label, href]) =>
                         '<li><a href="' + href + '">' + label + "</a></li>"
                 )
-                .join("")
-        );
-
-        blurb.innerHTML +=
-            '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden">';
-        blurb.innerHTML += tuples
-            .map(
-                ([label, href]) =>
-                    '<li><a href="' + href + '">' + label + "</a></li>"
-            )
-            .join("");
-        blurb.innerHTML += "</ul></div>";
+                .join("") +
+            "</ul></div>";
 
         blurb
             .querySelector(".download.actions > a")
