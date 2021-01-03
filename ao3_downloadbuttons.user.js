@@ -7,7 +7,7 @@
 // @include     http*://archiveofourown.org/*readings*
 // @include     http*://archiveofourown.org/series/*
 // @grant       none
-// @version     2.3.2
+// @version     2.3.3
 // ==/UserScript==
 
 (function () {
@@ -85,6 +85,21 @@
                 "?updated_at=" +
                 Date.now(),
         ]);
+
+        console.log(
+            tuples.map(
+                ([label, href]) =>
+                    '<li><a href="' + href + '">' + label + "</a></li>"
+            )
+        );
+        console.log(
+            tuples
+                .map(
+                    ([label, href]) =>
+                        '<li><a href="' + href + '">' + label + "</a></li>"
+                )
+                .join("")
+        );
 
         blurb.innerHTML +=
             '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden"></ul>';
