@@ -102,7 +102,7 @@
         );
 
         blurb.innerHTML +=
-            '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden"></ul>';
+            '<div class="download actions" aria-haspopup="true"><a href="#" class="collapsed">Download</a><ul class="expandable secondary hidden">';
         blurb.innerHTML += tuples
             .map(
                 ([label, href]) =>
