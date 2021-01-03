@@ -3,9 +3,10 @@
 
 - [`ao3_keystrokes.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js)
     - AO3 - Keystrokes
-    - Adds next page and previous page keystrokes
+    - Adds next/previous page/chapter/part and kudos keystrokes
         - Next: Shift + N or Right Arrow
         - Previous: Shift + P or Left Arrow
+        - Kudos (work pages only): K
 - [`ao3_seriesdownload.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
     - AO3 - Series Download Links
     - Adds a button which opens a modal to download stories from series
