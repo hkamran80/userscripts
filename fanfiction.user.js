@@ -12,8 +12,8 @@
 
 function pagination(e) {
     var evtobj = window.event ? event : e;
-    if (evtobj.keyCode == 78 && evtobj.shiftKey) {
-        // Next Page Keystroke (Shift + N)
+    if ((evtobj.keyCode === 78 && evtobj.shiftKey) || evtobj.keyCode === 39) {
+        // Next Chapter/Part in Series Keystroke (Shift + N || Right Arrow)
         const next_button_element = document.evaluate(
             "//button[contains(text(),'Next >')]",
             document,
@@ -30,8 +30,11 @@ function pagination(e) {
                 .replace("self.location=", "")
                 .replace("'", "")
                 .replace("'", "");
-    } else if (evtobj.keyCode == 80 && evtobj.shiftKey) {
-        // Previous Page Keystroke (Shift + P)
+    } else if (
+        (evtobj.keyCode === 80 && evtobj.shiftKey) ||
+        evtobj.keyCode === 37
+    ) {
+        // Previous Chapter/Part in Series Keystroke (Shift + P || Left Arrow)
         const prev_button_element = document.evaluate(
             "//button[contains(text(),'< Prev')]",
             document,
