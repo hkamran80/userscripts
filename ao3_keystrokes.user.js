@@ -9,6 +9,9 @@
 // @match        http*://archiveofourown.org/works/*
 // @match        http*://archiveofourown.org/collections/*
 // @match        http*://archiveofourown.org/tags/*
+// @match        http*://www.archiveofourown.org/works/*
+// @match        http*://www.archiveofourown.org/collections/*
+// @match        http*://www.archiveofourown.org/tags/*
 // @grant        none
 // ==/UserScript==
 

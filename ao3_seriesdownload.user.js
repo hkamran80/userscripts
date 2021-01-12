@@ -7,6 +7,7 @@
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js
 // @updateUrl    https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js
 // @match        https://archiveofourown.org/series/*
+// @match        https://www.archiveofourown.org/series/*
 // @grant        none
 // ==/UserScript==
 
