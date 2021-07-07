@@ -36,8 +36,8 @@
 -   [`qbraid_qbook.user.js`](https://github.com/hkamran80/userscripts/raw/main/qbraid_qbook.user.js)
     -   qBraid - Keystrokes
     -   Adds next and previous section keystrokes
-        -   Next: Shift + N
-        -   Previous: Shift + P
+        -   Next: Right arrow
+        -   Previous: Left arrow
 -   [`xkcd.user.js`](https://github.com/hkamran80/userscripts/raw/main/xkcd.user.js)
     -   XKCD - Keystrokes
     -   Adds next, previous, and random comic keystrokes
