@@ -24,6 +24,17 @@
         -   Next: Shift + N
         -   Previous: Shift + P
         -   Follow/Favorite: Shift + L
+-   [`fanfictionmobileredirect.user.js`](https://github.com/hkamran80/userscripts/raw/main/fanfictionmobileredirect.user.js)
+    -   FanFiction.net - Mobile Redirect
+    -   Redirects users from the mobile version of FanFiction.net to the desktop version
+-   [`gameinc_automoney.user.js`](https://github.com/hkamran80/userscripts/raw/main/gameinc_automoney.user.js)
+    -   Gameinc.io - Auto Money
+    -   Continously generates money for the player
+-   [`qbraid_qbook.user.js`](https://github.com/hkamran80/userscripts/raw/main/qbraid_qbook.user.js)
+    -   qBraid - Keystrokes
+    -   Adds next and previous section keystrokes
+        -   Next: Shift + N
+        -   Previous: Shift + P
 -   [`xkcd.user.js`](https://github.com/hkamran80/userscripts/raw/main/xkcd.user.js)
     -   XKCD - Keystrokes
     -   Adds next, previous, and random comic keystrokes
