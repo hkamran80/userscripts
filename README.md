@@ -2,6 +2,9 @@
 
 ## A collection of userscripts that I've created
 
+-   [`ao3_directdownload.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_directdownload.user.js)
+    -   AO3 - Direct Download Links
+    -   Makes the download book links direct
 -   [`ao3_downloadbuttons.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_downloadbuttons.user.js)
     -   AO3 - Download Buttons
     -   Adds a download button to each blurb on pages (not work pages)
