@@ -13,7 +13,7 @@
 // @include     http*://www.archiveofourown.org/series/*
 // @include     http*://www.archiveofourown.org/tags/*
 // @grant       none
-// @version     2.4.1
+// @version     2.4.2
 // ==/UserScript==
 
 (function () {
