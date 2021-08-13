@@ -6,12 +6,14 @@
 // @include     http*://archiveofourown.org/*bookmarks*
 // @include     http*://archiveofourown.org/*readings*
 // @include     http*://archiveofourown.org/series/*
+// @include     http*://archiveofourown.org/tags/*
 // @include     http*://www.archiveofourown.org/*works*
 // @include     http*://www.archiveofourown.org/*bookmarks*
 // @include     http*://www.archiveofourown.org/*readings*
 // @include     http*://www.archiveofourown.org/series/*
+// @include     http*://www.archiveofourown.org/tags/*
 // @grant       none
-// @version     2.4.1
+// @version     2.4.2
 // ==/UserScript==
 
 (function () {
