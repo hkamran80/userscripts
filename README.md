@@ -23,7 +23,8 @@
 - [`canvas_lms.user.js`](https://github.com/hkamran80/userscripts/raw/main/canvas_lms.user.js)
     - Canvas LMS - Keystrokes
     - Adds next page keystrokes when the next button is available (typically on modules)
-        - Next: Shift + N
+        - Next: Shift + N or Right Arrow
+        - Previous: Shift + P or Left Arrow
 - [`fanfiction.user.js`](https://github.com/hkamran80/userscripts/raw/main/fanfiction.user.js)
     - FanFiction.net - Keystrokes
     - Adds next chapter, previous chapter, and follow/favorite keystrokes
