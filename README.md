@@ -1,4 +1,4 @@
-{# Userscripts
+# Userscripts
 
 ## A collection of userscripts that I've created
 
