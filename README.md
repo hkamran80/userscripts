@@ -37,6 +37,9 @@
 - [`gameinc_automoney.user.js`](https://github.com/hkamran80/userscripts/raw/main/gameinc_automoney.user.js)
     - Gameinc.io - Auto Money
     - Continously generates money for the player
+- [`merriamwebster_keystrokes.user.js`](https://github.com/hkamran80/userscripts/raw/main/merriamwebster_keystrokes.user.js)
+    - Merriam-Webster - Keystrokes
+    - Adds a search focus keystroke (the slash key, `/`)
 - [`qbraid_qbook.user.js`](https://github.com/hkamran80/userscripts/raw/main/qbraid_qbook.user.js)
     - qBraid - Keystrokes
     - Adds next and previous section keystrokes
