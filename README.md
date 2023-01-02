@@ -37,6 +37,9 @@
 - [`gameinc_automoney.user.js`](https://github.com/hkamran80/userscripts/raw/main/gameinc_automoney.user.js)
   - Gameinc.io - Auto Money
   - Continuously generates money for the player
+- [`letterboxd_releasedatesorter.user.js`](https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js)
+  - Letterboxd Release Date Sorter
+  - Automatically applies the release date (newest first) filter on biography pages
 - [`merriamwebster_keystrokes.user.js`](https://github.com/hkamran80/userscripts/raw/main/merriamwebster_keystrokes.user.js)
   - Merriam-Webster - Keystrokes
   - Adds a search focus keystroke (the slash key, `/`)
