@@ -43,9 +43,12 @@ const workKeystrokes = (e) => {
         } else if (evtobj.keyCode === 75) {
             // Kudos Keystroke (K)
             document.querySelector("form#new_kudo input[type=submit]").click();
-        } else if (evtobj.keyCode === 67){
+        } else if (evtobj.keyCode === 67) {
             // Toggle comments (C)
-            document.querySelector("#show_comments_link a").click()
+            document.querySelector("#show_comments_link a").click();
+        } else if (evtobj.keyCode === 83 && evtobj.shiftKey) {
+            // Subscribe (Shift + S)
+            document.querySelector("form#new_subscription input[type=submit]").click();
         }
     }
 };
@@ -54,9 +57,7 @@ const collectionPagination = (e) => {
     const evtobj = window.event ? event : e;
     if ((evtobj.keyCode === 78 && evtobj.shiftKey) || evtobj.keyCode === 39) {
         // Next Page Keystroke (Shift + N || Right Arrow)
-        const nextPageElement = document.querySelector(
-            "li.next a[rel=next]"
-        );
+        const nextPageElement = document.querySelector("li.next a[rel=next]");
         window.location.href = nextPageElement.href;
     } else if (
         (evtobj.keyCode === 80 && evtobj.shiftKey) ||
