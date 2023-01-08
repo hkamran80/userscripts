@@ -43,6 +43,9 @@ const workKeystrokes = (e) => {
         } else if (evtobj.keyCode === 75) {
             // Kudos Keystroke (K)
             document.querySelector("form#new_kudo input[type=submit]").click();
+        } else if (evtobj.keyCode === 67){
+            // Toggle comments (C)
+            document.querySelector("#show_comments_link a").click()
         }
     }
 };
