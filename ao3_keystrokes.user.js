@@ -26,7 +26,7 @@ const workKeystrokes = (e) => {
             (evtobj.keyCode === 78 && evtobj.shiftKey) ||
             evtobj.keyCode === 39
         ) {
-            // Next Chapter/Part in Series Keystroke (Shift + N or Right Arrow)
+            // Next chapter/part in series (Shift + N or Right Arrow)
             const nextChapterElement =
                 document.querySelector(".chapter.next a") ||
                 document.querySelector(".series .next");
@@ -35,13 +35,13 @@ const workKeystrokes = (e) => {
             (evtobj.keyCode === 80 && evtobj.shiftKey) ||
             evtobj.keyCode === 37
         ) {
-            // Previous Chapter/Part in Series Keystroke (Shift + P or Left Arrow)
+            // Previous chapter/part in series (Shift + P or Left Arrow)
             const previousChapterElement =
                 document.querySelector(".chapter.previous a") ||
                 document.querySelector(".series .previous");
             window.location.href = previousChapterElement.href;
         } else if (evtobj.keyCode === 75) {
-            // Kudos Keystroke (K)
+            // Kudos (K)
             document.querySelector("form#new_kudo input[type=submit]").click();
         } else if (evtobj.keyCode === 67) {
             // Toggle comments (C)
@@ -56,14 +56,14 @@ const workKeystrokes = (e) => {
 const collectionPagination = (e) => {
     const evtobj = window.event ? event : e;
     if ((evtobj.keyCode === 78 && evtobj.shiftKey) || evtobj.keyCode === 39) {
-        // Next Page Keystroke (Shift + N || Right Arrow)
+        // Next page (Shift + N or Right Arrow)
         const nextPageElement = document.querySelector("li.next a[rel=next]");
         window.location.href = nextPageElement.href;
     } else if (
         (evtobj.keyCode === 80 && evtobj.shiftKey) ||
         evtobj.keyCode === 37
     ) {
-        // Previous Page Keystroke (Shift + P || Left Arrow)
+        // Previous page (Shift + P or Left Arrow)
         const previousPageElement = document.querySelector(
             "li.previous a[rel=prev]"
         );
