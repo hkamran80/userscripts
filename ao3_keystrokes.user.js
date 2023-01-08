@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 - Keystrokes
 // @namespace    https://hkamran.com
-// @version      1.0.5
+// @version      1.1.0
 // @description  Keystrokes for AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
@@ -15,7 +15,7 @@
 // @grant        none
 // ==/UserScript==
 
-const workPagination = (e) => {
+const workKeystrokes = (e) => {
     const evtobj = window.event ? event : e;
 
     if (
@@ -26,7 +26,7 @@ const workPagination = (e) => {
             (evtobj.keyCode === 78 && evtobj.shiftKey) ||
             evtobj.keyCode === 39
         ) {
-            // Next Chapter/Part in Series Keystroke (Shift + N || Right Arrow)
+            // Next Chapter/Part in Series Keystroke (Shift + N or Right Arrow)
             const nextChapterElement =
                 document.querySelector(".chapter.next a") ||
                 document.querySelector(".series .next");
@@ -35,7 +35,7 @@ const workPagination = (e) => {
             (evtobj.keyCode === 80 && evtobj.shiftKey) ||
             evtobj.keyCode === 37
         ) {
-            // Previous Chapter/Part in Series Keystroke (Shift + P || Left Arrow)
+            // Previous Chapter/Part in Series Keystroke (Shift + P or Left Arrow)
             const previousChapterElement =
                 document.querySelector(".chapter.previous a") ||
                 document.querySelector(".series .previous");
@@ -76,5 +76,5 @@ if (
     document.onkeydown = collectionPagination;
 } else if (window.location.href.indexOf("/works/") !== -1) {
     console.info("[AO3 Keystrokes] Using work pagination keystrokes");
-    document.onkeydown = workPagination;
+    document.onkeydown = workKeystrokes;
 }
