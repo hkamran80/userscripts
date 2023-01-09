@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 - Keystrokes
 // @namespace    https://hkamran.com
-// @version      1.1.0
+// @version      1.1.1
 // @description  Keystrokes for AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
@@ -15,8 +15,12 @@
 // @grant        none
 // ==/UserScript==
 
+/**
+ * Keystrokes for work pages
+ * @param {Event} e The event object
+ */
 const workKeystrokes = (e) => {
-    const evtobj = window.event ? event : e;
+    const evtobj = window.event ? window.event : e;
 
     if (
         document.activeElement.tagName.toLowerCase() !== "textarea" &&
@@ -48,13 +52,26 @@ const workKeystrokes = (e) => {
             document.querySelector("#show_comments_link a").click();
         } else if (evtobj.keyCode === 83 && evtobj.shiftKey) {
             // Subscribe (Shift + S)
-            document.querySelector("form#new_subscription input[type=submit]").click();
+            document
+                .querySelector("form#new_subscription input[type=submit]")
+                .click();
+        }
+    } else {
+        if (
+            evtobj.keyCode === 13 &&
+            evtobj.shiftKey &&
+            document
+                .querySelector("textarea[name='comment[comment_content]']")
+                .value.trim().length > 0
+        ) {
+            // Add comment (Shift + Enter)
+            document.querySelector("form.new_comment").submit();
         }
     }
 };
 
 const collectionPagination = (e) => {
-    const evtobj = window.event ? event : e;
+    const evtobj = window.event ? window.event : e;
     if ((evtobj.keyCode === 78 && evtobj.shiftKey) || evtobj.keyCode === 39) {
         // Next page (Shift + N or Right Arrow)
         const nextPageElement = document.querySelector("li.next a[rel=next]");
