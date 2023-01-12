@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 - Keystrokes
 // @namespace    https://hkamran.com
-// @version      1.2.0
+// @version      1.2.1
 // @description  Keystrokes for AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
@@ -9,9 +9,11 @@
 // @match        http*://archiveofourown.org/works/*
 // @match        http*://archiveofourown.org/collections/*
 // @match        http*://archiveofourown.org/tags/*
+// @match        http*://archiveofourown.org/series/*
 // @match        http*://www.archiveofourown.org/works/*
 // @match        http*://www.archiveofourown.org/collections/*
 // @match        http*://www.archiveofourown.org/tags/*
+// @match        http*://www.archiveofourown.org/series/*
 // @grant        none
 // ==/UserScript==
 
