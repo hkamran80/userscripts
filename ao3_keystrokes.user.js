@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 - Keystrokes
 // @namespace    https://hkamran.com
-// @version      1.1.1
+// @version      1.2.0
 // @description  Keystrokes for AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js
@@ -70,8 +70,28 @@ const workKeystrokes = (e) => {
     }
 };
 
+/**
+ * Keystrokes for series pages
+ * @param {Event} e The event object
+ */
+const seriesPagination = (e) => {
+    const evtobj = window.event ? window.event : e;
+    
+    if (evtobj.keyCode === 83 && evtobj.shiftKey) {
+        // Subscribe (Shift + S)
+        document
+            .querySelector("form#new_subscription input[type=submit]")
+            .click();
+    }
+};
+
+/**
+ * Keystrokes for collection pages
+ * @param {Event} e The event object
+ */
 const collectionPagination = (e) => {
     const evtobj = window.event ? window.event : e;
+
     if ((evtobj.keyCode === 78 && evtobj.shiftKey) || evtobj.keyCode === 39) {
         // Next page (Shift + N or Right Arrow)
         const nextPageElement = document.querySelector("li.next a[rel=next]");
@@ -89,13 +109,16 @@ const collectionPagination = (e) => {
 };
 
 if (
-    (window.location.href.indexOf("/collections/") !== -1 ||
-        window.location.href.indexOf("/tags/")) &&
-    window.location.href.indexOf("/works/") === -1
+    (window.location.href.includes("/collections/") ||
+        window.location.href.includes("/tags/")) &&
+    !window.location.href.includes("/works/")
 ) {
     console.info("[AO3 Keystrokes] Using collection pagination keystrokes");
     document.onkeydown = collectionPagination;
-} else if (window.location.href.indexOf("/works/") !== -1) {
+} else if (window.location.href.includes("/works/")) {
     console.info("[AO3 Keystrokes] Using work pagination keystrokes");
     document.onkeydown = workKeystrokes;
+} else if (window.location.href.includes("/series/")) {
+    console.info("[AO3 Keystrokes] Using series pagination keystrokes");
+    document.onkeydown = seriesPagination;
 }
