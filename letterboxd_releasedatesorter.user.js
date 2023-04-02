@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd Release Date Sorter
 // @namespace    https://hkamran.com
-// @version      1.1.0.1
+// @version      1.1.1
 // @description  Automatically applies the release date (newest first) filter on Letterboxd pages
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
