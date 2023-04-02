@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Letterboxd Release Date Sorter
 // @namespace    https://hkamran.com
-// @version      1.1.0
+// @version      1.1.0.1
 // @description  Automatically applies the release date (newest first) filter on Letterboxd pages
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
@@ -26,7 +26,7 @@
         console.log("[LRDS] Changing to release date sorting...");
         if (window.location.href.includes("/page/")) {
             const splitHref = window.location.href.split("/page");
-            window.location.href = `${splitHref[0]}/by/release/page/{splitHref[1]}`;
+            window.location.href = `${splitHref[0]}/by/release/page/${splitHref[1]}`;
         } else {
             window.location.href = `${window.location.href}/by/release`;
         }
