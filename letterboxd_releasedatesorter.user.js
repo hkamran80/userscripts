@@ -25,7 +25,7 @@
     if (!window.location.href.includes("/by/")) {
         console.log("[LRDS] Changing to release date sorting...");
         if (window.location.href.includes("/page/")) {
-            const splitHref = window.location.href.split("/page");
+            const splitHref = window.location.href.split("/page/");
             window.location.href = `${splitHref[0]}/by/release/page/${splitHref[1]}`;
         } else {
             window.location.href = `${window.location.href}/by/release`;
