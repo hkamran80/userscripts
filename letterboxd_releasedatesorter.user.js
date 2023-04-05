@@ -4,8 +4,8 @@
 // @version      1.2.0
 // @description  Automatically applies the release date (newest first) filter on Letterboxd pages
 // @author       H. Kamran
-// @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
-// @updateUrl    https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
+// @downloadURL  https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
+// @updateURL    https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js
 // @match        https://letterboxd.com/actor/*
 // @match        https://letterboxd.com/director/*
 // @match        https://letterboxd.com/writer/*
