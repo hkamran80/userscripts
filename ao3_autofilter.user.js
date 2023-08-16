@@ -14,12 +14,27 @@
 // @grant        none
 // ==/UserScript==
 
-(function() {
-    'use strict';
+(function () {
+  "use strict";
 
-    if (window.location.href.includes("/works") && !window.location.href.includes("?")) {
-        console.log("[AO3-AF] Applying filters (English, exclude crossovers)...");
-        // work_search[crossover] - [blank] (include), F (exclude), T (only)
-        window.location.href = `${window.location.href}?commit=Sort+and+Filter&page=2&work_search[complete]=&work_search[crossover]=F&work_search[date_from]=&work_search[date_to]=&work_search[excluded_tag_names]=&work_search[language_id]=en&work_search[other_tag_names]=&work_search[query]=&work_search[sort_column]=revised_at&work_search[words_from]=&work_search[words_to]=`
+  if (
+    window.location.href.includes("/works") &&
+    !window.location.href.includes("?")
+  ) {
+    console.log("[AO3-AF] Applying filters (English, exclude crossovers)...");
+
+    let newURL = `${window.location.href}?commit=Sort+and+Filter`;
+
+    if (window.location.href.includes("page=")) {
+      const pageIndex = window.location.href.indexOf("page=");
+      const nextAmpersand = window.location.href.indexOf("&", pageIndex);
+
+      newURL += `&page=${window.location.href.slice(
+        pageIndex + 5,
+        nextAmpersand
+      )}`;
     }
+    // work_search[crossover] - [blank] (include), F (exclude), T (only)
+    window.location.href = `${newURL}&work_search[complete]=&work_search[crossover]=F&work_search[date_from]=&work_search[date_to]=&work_search[excluded_tag_names]=&work_search[language_id]=en&work_search[other_tag_names]=&work_search[query]=&work_search[sort_column]=revised_at&work_search[words_from]=&work_search[words_to]=`;
+  }
 })();
