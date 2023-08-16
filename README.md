@@ -2,6 +2,9 @@
 
 ## A collection of userscripts that I've created
 
+- [`ao3_autofilter.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js)
+  - AO3 - Auto-filter
+  - Automatically set the work language filter to English and exclude crossovers
 - [`ao3_directdownload.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_directdownload.user.js)
   - AO3 - Direct Download Links
   - Makes the download book links direct
