@@ -19,11 +19,16 @@
 
   if (
     window.location.href.includes("/works") &&
-    !window.location.href.includes("?")
+    (!window.location.href.includes("?") ||
+      window.location.href.includes("?page="))
   ) {
     console.log("[AO3-AF] Applying filters (English, exclude crossovers)...");
 
-    let newURL = `${window.location.href}?commit=Sort+and+Filter`;
+    let newURL = `${
+      window.location.href.includes("?")
+        ? window.location.href.split("?")[0]
+        : window.location.href
+    }?commit=Sort+and+Filter`;
 
     if (window.location.href.includes("page=")) {
       const pageIndex = window.location.href.indexOf("page=");
@@ -31,7 +36,7 @@
 
       newURL += `&page=${window.location.href.slice(
         pageIndex + 5,
-        nextAmpersand
+        nextAmpersand < 0 ? window.location.href.length : nextAmpersand
       )}`;
     }
     // work_search[crossover] - [blank] (include), F (exclude), T (only)
