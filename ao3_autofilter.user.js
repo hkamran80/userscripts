@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 - Auto-filter
 // @namespace    https://hkamran.com
-// @version      1.0.0
+// @version      1.0.1
 // @description  Keystrokes for AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js
