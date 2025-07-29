@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 Mirror Redirect
 // @namespace    https://hkamran.com
-// @version      1.0.2
+// @version      1.0.3
 // @description  Redirect the mirror sites to the main site
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_redirect.user.js
@@ -13,12 +13,5 @@
 // ==/UserScript==
 
 (function () {
-  const mirrors = [
-    "archive.transformativeworks.org",
-    "insecure.archiveofourown.org",
-    "archiveofourown.gay",
-  ];
-
-  if (mirrors.includes(window.location.host))
-    window.location.host = "archiveofourown.org";
+  window.location.host = "archiveofourown.org";
 })();
