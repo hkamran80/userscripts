@@ -2,57 +2,43 @@
 
 ## A collection of userscripts that I've created
 
-- [`ao3_autofilter.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js)
-  - AO3 - Auto-filter
+- [AO3 - Auto-filter](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js)
   - Automatically set the work language filter to English and exclude crossovers
-- [`ao3_directdownload.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_directdownload.user.js)
-  - AO3 - Direct Download Links
+- [AO3 - Direct Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_directdownload.user.js)
   - Makes the download book links direct
-- [`ao3_downloadbuttons.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_downloadbuttons.user.js)
-  - AO3 - Download Buttons
+- [AO3 - Download Buttons](https://github.com/hkamran80/userscripts/raw/main/ao3_downloadbuttons.user.js)
   - Adds a download button to each blurb on pages (not work pages)
-- [`ao3_keystrokes.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js)
-  - AO3 - Keystrokes
+- [AO3 - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/ao3_keystrokes.user.js)
   - Adds next/previous page/chapter/part and kudos keystrokes
     - Next: Shift + N or Right Arrow
     - Previous: Shift + P or Left Arrow
     - Kudos (work pages only): K
-- [`ao3_seriesdownload.user.js`](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
-  - AO3 - Series Download Links
+- [AO3 - Series Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
   - Adds a button which opens a modal to download stories from series
-- [`canvas_autonext.user.js`](https://github.com/hkamran80/userscripts/raw/main/canvas_autonext.user.js)
-  - Canvas LMS - Automatic Next Clicker
+- [Canvas LMS - Automatic Next Clicker](https://github.com/hkamran80/userscripts/raw/main/canvas_autonext.user.js)
   - Clicks the next button on module pages
-- [`canvas_lms.user.js`](https://github.com/hkamran80/userscripts/raw/main/canvas_lms.user.js)
-  - Canvas LMS - Keystrokes
+- [Canvas LMS - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/canvas_lms.user.js)
   - Adds next page keystrokes when the next button is available (typically on modules)
     - Next: Shift + N or Right Arrow
     - Previous: Shift + P or Left Arrow
-- [`fanfiction.user.js`](https://github.com/hkamran80/userscripts/raw/main/fanfiction.user.js)
-  - FanFiction.net - Keystrokes
+- [FanFiction.Net - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/fanfiction.user.js)
   - Adds next chapter, previous chapter, and follow/favorite keystrokes
     - Next: Shift + N
     - Previous: Shift + P
     - Follow/Favorite: Shift + L
-- [`fanfictionmobileredirect.user.js`](https://github.com/hkamran80/userscripts/raw/main/fanfictionmobileredirect.user.js)
-  - FanFiction.net - Mobile Redirect
-  - Redirects users from the mobile version of FanFiction.net to the desktop version
-- [`gameinc_automoney.user.js`](https://github.com/hkamran80/userscripts/raw/main/gameinc_automoney.user.js)
-  - Gameinc.io - Auto Money
+- [FanFiction.Net - Mobile Redirect](https://github.com/hkamran80/userscripts/raw/main/fanfictionmobileredirect.user.js)
+  - Redirects users from the mobile version of FanFiction.Net to the desktop version
+- [Gameinc.io - Auto Money](https://github.com/hkamran80/userscripts/raw/main/gameinc_automoney.user.js)
   - Continuously generates money for the player
-- [`letterboxd_releasedatesorter.user.js`](https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js)
-  - Letterboxd Release Date Sorter
+- [Letterboxd - Sort by Release Date](https://github.com/hkamran80/userscripts/raw/main/letterboxd_releasedatesorter.user.js)
   - Automatically applies the release date (newest first) filter on biography pages
-- [`merriamwebster_keystrokes.user.js`](https://github.com/hkamran80/userscripts/raw/main/merriamwebster_keystrokes.user.js)
-  - Merriam-Webster - Keystrokes
+- [Merriam-Webster - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/merriamwebster_keystrokes.user.js)
   - Adds a search focus keystroke (the slash key, `/`)
-- [`qbraid_qbook.user.js`](https://github.com/hkamran80/userscripts/raw/main/qbraid_qbook.user.js)
-  - qBraid - Keystrokes
+- [qBraid - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/qbraid_qbook.user.js)
   - Adds next and previous section keystrokes
     - Next: Right arrow
     - Previous: Left arrow
-- [`xkcd.user.js`](https://github.com/hkamran80/userscripts/raw/main/xkcd.user.js)
-  - XKCD - Keystrokes
+- [XKCD - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/xkcd.user.js)
   - Adds next, previous, and random comic keystrokes
     - Next: Shift + N
     - Previous: Shift + P
