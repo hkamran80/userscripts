@@ -16,7 +16,7 @@ A collection of userscripts that I've created
     - Next: Shift + N or Right Arrow
     - Previous: Shift + P or Left Arrow
     - Kudos (work pages only): K
-- [AO3 - Redirect](https://github.com/hkamran80/userscripts/raw/main/ao3_redirect.user.js)
+- [AO3 - Mirror Redirect](https://github.com/hkamran80/userscripts/raw/main/ao3_redirect.user.js)
   - Redirect from official AO3 mirror sites to the main site
 - [AO3 - Series Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
   - Adds a button which opens a modal to download stories from series
