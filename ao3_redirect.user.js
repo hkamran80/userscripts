@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 Mirror Redirect
 // @namespace    https://hkamran.com
-// @version      1.0.3
+// @version      1.0.4
 // @description  Redirect the mirror sites to the main site
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_redirect.user.js
@@ -9,6 +9,7 @@
 // @match        http*://archive.transformativeworks.org/*
 // @match        http://insecure.archiveofourown.org/*
 // @match        http*://archiveofourown.gay/*
+// @match        http*://www.archiveofourown.org/*
 // @grant        none
 // ==/UserScript==
 
