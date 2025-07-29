@@ -20,6 +20,8 @@ A collection of userscripts that I've created
   - Redirect from official AO3 mirror sites to the main site
 - [AO3 - Series Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
   - Adds a button which opens a modal to download stories from series
+- [CA Governor Legislation Links](https://github.com/hkamran80/userscripts/raw/main/cagov_legislation.user.js)
+  - Link bill IDs in signed legislation posts
 - [Canvas LMS - Automatic Next Clicker](https://github.com/hkamran80/userscripts/raw/main/canvas_autonext.user.js)
   - Clicks the next button on module pages
 - [Canvas LMS - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/canvas_lms.user.js)
