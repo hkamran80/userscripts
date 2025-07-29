@@ -1,9 +1,12 @@
 # Userscripts
 
-## A collection of userscripts that I've created
+A collection of userscripts that I've created
 
 - [AO3 - Auto-filter](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js)
   - Automatically set the work language filter to English and exclude crossovers
+- [AO3 - Clone Subscribe Button](https://github.com/hkamran80/userscripts/raw/main/ao3_clonesubscribe.user.js)
+  - Clone the subscribe button and put it after the kudos button
+  - Originally written by [scriptfairy](https://greasyfork.org/en/scripts/22497-ao3-clone-subscribe-button), modified to remove jQuery
 - [AO3 - Direct Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_directdownload.user.js)
   - Makes the download book links direct
 - [AO3 - Download Buttons](https://github.com/hkamran80/userscripts/raw/main/ao3_downloadbuttons.user.js)
@@ -13,6 +16,8 @@
     - Next: Shift + N or Right Arrow
     - Previous: Shift + P or Left Arrow
     - Kudos (work pages only): K
+- [AO3 - Redirect](https://github.com/hkamran80/userscripts/raw/main/ao3_redirect.user.js)
+  - Redirect from official AO3 mirror sites to the main site
 - [AO3 - Series Download Links](https://github.com/hkamran80/userscripts/raw/main/ao3_seriesdownload.user.js)
   - Adds a button which opens a modal to download stories from series
 - [Canvas LMS - Automatic Next Clicker](https://github.com/hkamran80/userscripts/raw/main/canvas_autonext.user.js)
