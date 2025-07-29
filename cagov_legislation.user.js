@@ -13,7 +13,10 @@
 
 (function () {
   if (
-    !document.querySelector("h1").toLowerCase().includes("signs legislation") ||
+    !document
+      .querySelector("h1")
+      .textContent.toLowerCase()
+      .includes("signs legislation") ||
     !window.location.pathname.includes("signs-legislation") ||
     !window.location.pathname.includes("legislation")
   )
