@@ -22,6 +22,8 @@ A collection of userscripts that I've created
   - Adds a button which opens a modal to download stories from series
 - [CA Governor Legislation Links](https://github.com/hkamran80/userscripts/raw/main/cagov_legislation.user.js)
   - Link bill IDs in signed legislation posts
+- [CalMatters' Digital Democracy - Direct Legislative Links](https://github.com/hkamran80/userscripts/raw/main/digitaldemocracy_leglinks.user.js)
+  - Link directly to [California Legislative Information](https://leginfo.legislature.ca.gov), the state's official legislative portal, from [Digital Democracy](https://calmatters.digitaldemocracy.org)
 - [Canvas LMS - Automatic Next Clicker](https://github.com/hkamran80/userscripts/raw/main/canvas_autonext.user.js)
   - Clicks the next button on module pages
 - [Canvas LMS - Keystrokes](https://github.com/hkamran80/userscripts/raw/main/canvas_lms.user.js)
