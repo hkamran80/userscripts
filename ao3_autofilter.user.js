@@ -1,15 +1,13 @@
 // ==UserScript==
 // @name         AO3 - Auto-filter
 // @namespace    https://hkamran.com
-// @version      1.0.1
-// @description  Keystrokes for AO3
+// @version      1.1.0
+// @description  Automatically filter work pages on AO3
 // @author       H. Kamran
 // @downloadUrl  https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js
 // @updateUrl    https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js
-// @match        http*://archiveofourown.org/collections/*
-// @match        http*://archiveofourown.org/tags/*
-// @match        http*://www.archiveofourown.org/collections/*
-// @match        http*://www.archiveofourown.org/tags/*
+// @match        https://archiveofourown.org/collections/*
+// @match        https://archiveofourown.org/tags/*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=archiveofourown.org
 // @grant        none
 // ==/UserScript==
@@ -17,29 +15,72 @@
 (function () {
   "use strict";
 
+  /**
+   * The AO3 crossover status
+   * @typedef {("include"|"exclude"|"only")} CrossoverStatus
+   */
+
+  /**
+   * A map of crossover statuses to search parameters
+   * @type {Object.<CrossoverStatus, string>}
+   */
+  const crossoverMap = {
+    include: "",
+    exclude: "F",
+    only: "T",
+  };
+
   if (
-    window.location.href.includes("/works") &&
-    (!window.location.href.includes("?") ||
-      window.location.href.includes("?page="))
+    window.location.pathname.includes("/works") &&
+    (!window.location.search.includes("?") ||
+      window.location.search.includes("?page="))
   ) {
-    console.log("[AO3-AF] Applying filters (English, exclude crossovers)...");
+    // The timeout is needed to give time for the configuration to load.
+    setTimeout(() => {
+      console.log("[AO3-AF] Applying filters...");
 
-    let newURL = `${
-      window.location.href.includes("?")
-        ? window.location.href.split("?")[0]
-        : window.location.href
-    }?commit=Sort+and+Filter`;
+      /**
+       * `window.ao3AutofilterConfig` is a configuration object like AO3 Savior's.
+       * Leaving any property undefined will use the default value.
+       *
+       * @property {CrossoverStatus} crossover - The crossover status
+       * @property {string} language - Any ISO 639-1 language code support by AO3
+       * @property {string[]} excludedTags - The tags to exclude
+       *
+       * @example
+       * window.ao3AutofilterConfig = {
+       *   crossover: "exclude",
+       *   language: "en",
+       *   excludedTags: ["Created Using Generative AI"]
+       * }
+       */
+      const config = window.ao3AutofilterConfig;
+      if (!config)
+        console.log(
+          "[AO3-AF] No configuration found, using defaults (English, exclude crossovers, no AI).",
+        );
 
-    if (window.location.href.includes("page=")) {
-      const pageIndex = window.location.href.indexOf("page=");
-      const nextAmpersand = window.location.href.indexOf("&", pageIndex);
+      const searchParams = new URLSearchParams();
 
-      newURL += `&page=${window.location.href.slice(
-        pageIndex + 5,
-        nextAmpersand < 0 ? window.location.href.length : nextAmpersand
-      )}`;
-    }
-    // work_search[crossover] - [blank] (include), F (exclude), T (only)
-    window.location.href = `${newURL}&work_search[complete]=&work_search[crossover]=F&work_search[date_from]=&work_search[date_to]=&work_search[excluded_tag_names]=&work_search[language_id]=en&work_search[other_tag_names]=&work_search[query]=&work_search[sort_column]=revised_at&work_search[words_from]=&work_search[words_to]=`;
+      const existingSearchParams = new URLSearchParams(window.location.search);
+      if (existingSearchParams.has("page")) {
+        searchParams.set("page", existingSearchParams.get("page"));
+      }
+
+      searchParams.set(
+        "work_search[crossover]",
+        config?.crossover ?? crossoverMap["exclude"],
+      );
+      searchParams.set("work_search[language_id]", config?.language ?? "en");
+
+      // Excluded Tags
+      const excludedTags = ["Created Using Generative AI"];
+      searchParams.set(
+        "work_search[excluded_tag_names]",
+        (config?.excludedTags ?? excludedTags).join(","),
+      );
+
+      window.location.search = searchParams.toString();
+    }, 10);
   }
 })();

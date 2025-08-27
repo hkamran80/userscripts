@@ -3,7 +3,12 @@
 A collection of userscripts that I've created
 
 - [AO3 - Auto-filter](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilter.user.js)
-  - Automatically set the work language filter to English and exclude crossovers
+  - Automatically set the work language filter to English, exclude crossovers, and filter out
+    "AI"-generated works.
+- [AO3 - Auto-filter Configuration](https://github.com/hkamran80/userscripts/raw/main/ao3_autofilterconfig.user.js)
+  - Customize the Auto-filter userscript by setting the crossover status, language filter, and excluded
+    tags.
+  - It is recommended to disable updates if you do not want to lose your configuration.
 - [AO3 - Clone Subscribe Button](https://github.com/hkamran80/userscripts/raw/main/ao3_clonesubscribe.user.js)
   - Clone the subscribe button and put it after the kudos button
   - Originally written by [scriptfairy](https://greasyfork.org/en/scripts/22497-ao3-clone-subscribe-button), modified to remove jQuery
